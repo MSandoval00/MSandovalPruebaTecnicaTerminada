@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="875071fd9cff4a9e865a8b21af51f711" Name="Diagram1">
+        <EntityTypeShape EntityType="MSandovalPruebaTecnicaModel.Artista" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MSandovalPruebaTecnicaModel.Disco" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MSandovalPruebaTecnicaModel.Genero" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="MSandovalPruebaTecnicaModel.FK__Disco__IdArtista__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="MSandovalPruebaTecnicaModel.FK__Disco__IdGenero__1BFD2C07" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

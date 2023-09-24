@@ -1,0 +1,71 @@
+﻿@model ML.Disco
+@{
+    ViewBag.Title = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetAll</h2>
+<hr />
+<a class="btn btn-success col-md-2" href="@Url.Action("Form","Disco")">Agregar</a>
+<br />
+<hr />
+<div class="container">
+    <div class="row">
+        @if (Model.Discos != null)
+        {
+            <table class="table table-bordered table-responsive">
+                <thead>
+                    <tr>
+                        <th>Id Disco</th>
+                        <th>Titulo</th>
+                        <th>Artista</th>
+                        <th>Genero</th>
+                        <th>Duración</th>
+                        <th>Año</th>
+                        <th>Distribuidora</th>
+                        <th>Ventas</th>
+                        <th>Disponibilidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (ML.Disco disco in Model.Discos)
+                    {
+                    <tr>
+                        <td class="col-md-1">@disco.IdDisco</td>
+                        <td class="col-md-1">@disco.Titulo</td>
+                        <td class="col-md-1">@disco.Artista.NombreArtista</td>
+                        <td class="col-md-1">@disco.Genero.NombreGenero</td>
+                        <td class="col-md-1">@disco.Duracion</td>
+                        <td class="col-md-1">@disco.Anio</td>
+                        <td class="col-md-1">@disco.Distribuidora</td>
+                        <td class="col-md-1">@disco.Ventas</td>
+                        <td class="col-md-1">@disco.Disponibilidad</td>
+                        <td class="col-md-1">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a class="btn btn-danger" href="@Url.Action("Delete","Disco",new {IdDisco=disco.IdDisco})">Eliminar</a>
+                                </div>
+                                <br />
+                                <div class="col-md-3">
+                                    <a class="btn btn-warning" href="@Url.Action("Form","Disco",new {IdDisco=disco.IdDisco})">Actualizar</a>
+                                </div>
+                            </div>
+
+                            
+                        </td>
+                    </tr>    
+                    }
+                    
+                </tbody>
+
+            </table>
+        }
+        else
+        {
+            <h1>No hay registros</h1>
+        }
+
+    </div>
+</div>
+
